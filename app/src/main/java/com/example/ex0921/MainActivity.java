@@ -1,5 +1,6 @@
 package com.example.ex0921;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 
@@ -37,6 +38,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void popImgAdv(View view) {
+        adb.setTitle("Text and Image with a button to close the Alert");
+        adb.setMessage("This is text is an alert text");
+        adb.setIcon(R.drawable.minion);
+        adb.setCancelable(false);
+        adb.setNegativeButton("Close", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+        AlertDialog ad = adb.create();
+        ad.show();
     }
 
     public void popBackground(View view) {
