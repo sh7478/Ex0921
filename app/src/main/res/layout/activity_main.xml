@@ -29,6 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:onClick="popMsg"
             android:text="Pop a Messag" />
 
         <Space
@@ -37,10 +38,11 @@
             android:layout_weight="1" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/btnImg"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:onClick="popImg"
             android:text="Pop an Image" />
 
         <Space
@@ -53,6 +55,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:onClick="popImgAdv"
             android:text="pop image with a &quot;close&quot; button" />
 
         <Space
@@ -65,6 +68,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:onClick="popBackground"
             android:text="change background" />
 
         <Space
@@ -77,6 +81,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:onClick="popBackgroundAdv"
             android:text="change background and also restore to default" />
 
         <Space
