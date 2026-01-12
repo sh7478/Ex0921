@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void popMsg(View view) {
+        adb.setTitle("Text Alert");
+        adb.setMessage("This is text is an alert text");
     }
 
     public void popImg(View view) {
