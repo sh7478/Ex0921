@@ -24,9 +24,16 @@ public class MainActivity extends AppCompatActivity {
     public void popMsg(View view) {
         adb.setTitle("Text Alert");
         adb.setMessage("This is text is an alert text");
+        AlertDialog ad = adb.create();
+        ad.show();
     }
 
     public void popImg(View view) {
+        adb.setTitle("Text and Image Alert");
+        adb.setMessage("This is text is an alert text");
+        adb.setIcon(R.drawable.minion);
+        AlertDialog ad = adb.create();
+        ad.show();
     }
 
     public void popImgAdv(View view) {
