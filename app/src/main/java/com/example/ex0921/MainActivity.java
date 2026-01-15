@@ -1,3 +1,10 @@
+
+/**
+* @author shaked hazan shaked1246@gmail.com
+* @version 1.0
+* @since 2024-07-26
+*This class demonstrates various AlertDialogs in an Android application.
+*/
 package com.example.ex0921;
 
 import android.content.DialogInterface;
@@ -19,6 +26,12 @@ public class MainActivity extends AppCompatActivity {
 
     AlertDialog.Builder adb;
     LinearLayout mainLayout;
+    /**
+    * Called when the activity is first created. This is where you should do all of your normal static set up: create views, bind data to lists, etc.
+    * <p>
+    *
+    * @param savedInstanceState If the activity is being re-initialized after previously being shut down then this Bundle contains the data it most recently supplied in onSaveInstanceState(Bundle).
+    */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +41,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+    * Displays a simple AlertDialog with a title and message.
+    * <p>
+    *
+    * @param view The view that was clicked to trigger this method.
+    */
     public void popMsg(View view) {
         adb.setTitle("Text Alert");
         adb.setMessage("This is text is an alert text");
@@ -35,6 +54,12 @@ public class MainActivity extends AppCompatActivity {
         ad.show();
     }
 
+    /**
+    * Displays an AlertDialog with a title, message, and an icon.
+    * <p>
+    *
+    * @param view The view that was clicked to trigger this method.
+    */
     public void popImg(View view) {
         adb.setTitle("Text and Image Alert");
         adb.setMessage("This is text is an alert text");
@@ -43,6 +68,12 @@ public class MainActivity extends AppCompatActivity {
         ad.show();
     }
 
+    /**
+    * Displays an advanced AlertDialog with a title, message, icon, and a close button. It cannot be cancelled by pressing outside the dialog.
+    * <p>
+    *
+    * @param view The view that was clicked to trigger this method.
+    */
     public void popImgAdv(View view) {
         adb.setTitle("Text and Image with a button to close the Alert");
         adb.setMessage("This is text is an alert text press the Close button to return to the homePage");
@@ -57,6 +88,12 @@ public class MainActivity extends AppCompatActivity {
         ad.show();
     }
 
+    /**
+    * Displays an AlertDialog that allows changing the background color of the main layout.
+    * <p>
+    *
+    * @param view The view that was clicked to trigger this method.
+    */
     public void popBackground(View view) {
         adb.setTitle("Text and a button to change the background");
         adb.setMessage("This is text is an alert text");
@@ -75,6 +112,12 @@ public class MainActivity extends AppCompatActivity {
         ad.show();
     }
 
+    /**
+    * Displays an advanced AlertDialog that allows changing or restoring the background color of the main layout.
+    * <p>
+    *
+    * @param view The view that was clicked to trigger this method.
+    */
     public void popBackgroundAdv(View view) {
         adb.setTitle("Text and a button to change the background");
         adb.setMessage("This is text is an alert text");
