@@ -8,6 +8,7 @@
 package com.example.ex0921;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -139,5 +140,10 @@ public class MainActivity extends AppCompatActivity {
                 });
         AlertDialog ad = adb.create();
         ad.show();
+    }
+
+    public void openCredits(View view) {
+        Intent intent = new Intent(this, Credits.class);
+        startActivity(intent);
     }
 }
