@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        adb = new AlertDialog.Builder(this);
         mainLayout = findViewById(R.id.main);
 
     }
@@ -49,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
     * @param view The view that was clicked to trigger this method.
     */
     public void popMsg(View view) {
+        adb = new AlertDialog.Builder(this);
         adb.setTitle("Text Alert");
         adb.setMessage("This is text is an alert text");
         AlertDialog ad = adb.create();
@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
     * @param view The view that was clicked to trigger this method.
     */
     public void popImg(View view) {
+        adb = new AlertDialog.Builder(this);
         adb.setTitle("Text and Image Alert");
         adb.setMessage("This is text is an alert text");
         adb.setIcon(R.drawable.minion);
@@ -76,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
     * @param view The view that was clicked to trigger this method.
     */
     public void popImgAdv(View view) {
+        adb = new AlertDialog.Builder(this);
         adb.setTitle("Text and Image with a button to close the Alert");
         adb.setMessage("This is text is an alert text press the Close button to return to the homePage");
         adb.setIcon(R.drawable.minion);
@@ -96,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
     * @param view The view that was clicked to trigger this method.
     */
     public void popBackground(View view) {
+        adb = new AlertDialog.Builder(this);
         adb.setTitle("Text and a button to change the background");
         adb.setMessage("This is text is an alert text");
         adb.setNegativeButton("Close", new DialogInterface.OnClickListener() {
@@ -120,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
     * @param view The view that was clicked to trigger this method.
     */
     public void popBackgroundAdv(View view) {
+        adb = new AlertDialog.Builder(this);
         adb.setTitle("Text and a button to change the background");
         adb.setMessage("This is text is an alert text");
         adb.setNegativeButton("Close", new DialogInterface.OnClickListener() {
