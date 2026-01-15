@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void popBackground(View view) {
-        adb.setTitle("Text, Image, and a button to change the background");
+        adb.setTitle("Text and a button to change the background");
         adb.setMessage("This is text is an alert text");
         adb.setNegativeButton("Close", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
@@ -76,5 +76,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void popBackgroundAdv(View view) {
+        adb.setTitle("Text and a button to change the background");
+        adb.setMessage("This is text is an alert text");
+        adb.setNegativeButton("Close", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+        adb.setPositiveButton("Change Background", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                Random rnd = new Random();
+                mainLayout.setBackgroundColor(Color.rgb(rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256)));
+            }
+        });
+        adb.setNeutralButton("Restore Background", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        mainLayout.setBackgroundColor(Color.WHITE);
+                    }
+                });
+        AlertDialog ad = adb.create();
+        ad.show();
     }
 }
